@@ -7,7 +7,6 @@ public class Admin {
 	protected List <Admin> users=new ArrayList <> ();
 	static String[] usernames= {"ola","danashami","aya"};
 	static String[] passwords= {"123@","456#","789$"};
-	private Admin a,b;
 
 	private String username=" ";
 	private String password=" ";
@@ -20,7 +19,7 @@ public class Admin {
 	}
 	public void usersTest() {
 		for(int l = 0; l < 3; l++) {
-			a=new Admin(usernames[l],passwords[l]);
+			Admin a=new Admin(usernames[l],passwords[l]);
 			users.add(a);	
 		}
 	}
@@ -34,7 +33,7 @@ public class Admin {
 			return 0;
 	}
 	public int checkifLogout(String user, String pass) { 
-		b=new Admin(user, pass);
+		Admin b=new Admin(user, pass);
 		if(!users.contains(b)){
 		return 1;
 	}
